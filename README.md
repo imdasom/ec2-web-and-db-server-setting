@@ -36,3 +36,11 @@ skip-external-locking
 bind-address=0.0.0.0
 ```
 
+# SSL 적용
+EC2 Amazon Linux 2
+```
+sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo yum-config-manager --enable epel
+sudo yum install certbot
+sudo certbot certonly --standalone -d yourdomain.com
+```
